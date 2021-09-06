@@ -3,6 +3,30 @@
 Process Modelling
 
 
+# Vehicle Routing Problem with Time Windows
+
+Computational Logistics of the Vehicle Routing Problem with Time Windows (VRPTW). Comparative Review of application of the solution techniques, the Particle Swarm Optimisation (PSO) algorithm and Genetic Algorithm (GA) to the VRPTW.
+
+Conference Proceedings: https://ieeexplore.ieee.org/document/9004294
+
+## SOLUTION TECHNIQUE ALGORITHMS
+
+The solution technique algorithms are based according to the respective references given below. The algorithms are coded using Python 3.
+
+### Genetic Algorithm for the VRPTW:
+
+Ombuki, Beatrice, Brian J. Ross, and Franklin Hanshar. "Multi-objective genetic algorithms for vehicle routing problem with time windows." Applied Intelligence 24.1 (2006): 17-30.
+https://link.springer.com/content/pdf/10.1007/s10489-006-6926-z.pdf
+
+#### Particle Swarm Optimisation algorithm for the VRPTW:
+
+Gong YJ, Zhang J, Liu O, Huang RZ, Chung HS, Shi YH. Optimizing the vehicle routing problem with time windows: a discrete particle swarm optimization approach. IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews). 2012 Mar;42(2):254-67.
+https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5773510
+
+#### Datasets: Solomon Benchmarking Dataset
+
+https://www.sintef.no/projectweb/top/vrptw/solomon-benchmark/
+
 
 Problem description and mathematical formulation
 
@@ -66,54 +90,7 @@ Time point that vehicle  start to work at date
 Time point that vehicle  end the work at date
 Date that customer is served
 
-Objective Function
+Objective Function(1)
 
-```
-(1)
-```
-
-Subject to
-(2)
-(3)
-(4)
-
-```
-k<
-
-(5)
-(6)
-
-(7)
-(8)
-(9)
-
-(10)
-(11)
-(12)
-(13)
-
-(14)
-
-(15)
-
-(16)
-
-(17)
-
-(18)
-(19)
-
-(20)
-(21)
-(22)
-(23)
-(24)
-(25)
-(26)
-(27)
-(28)
-(29)
-(30)
 
 The objective function (1) minimize the total travel cost and the overnight cost of all the trips. Constraint (2) ensure that each customer is served only once. Constraint (3) guarantee that only one vehicle is responsible for each journey. Constraint (4) ensure that vehicle  has performed trip  before it will perform trip . Constraint (5) guarantee that trips which do not start and end at the customer's location start from the depot and return to the depot at the end of the trip. Constraint (6) ensure that total volume of oil recovered in trips which do not start and end at the customer's location should not exceed the vehicle capacity . Constraint (7) ensure that the volume of oil recovered in the vehicle  does not exceed the vehicle capacity before vehicle  returning to the depot. Constraint (8)(9) that the first customer of a trip and the last customer of a trip are included in the trip schedule. Constraint (10) explain the relationship between the destination of the overnight trip of vehicle  and the start point of the first trip on the next day. Constraint (11)(12) ensure that vehicle k arrives at customer i within the operating hours of customer i. Constraint (13) address the time relationship between two consecutive trips of vehicle k in the same date. Constraint (14) address the time relationship between two consecutive customer i and j in trip w. Constraint (15)(16) illustrates the conditions to be met by vehicle k to overnight. Constraint (17)-(20) address the time relationship of trip starting time and trip ending time in different scenario. Constraint (21) address the time relationship between the starting time of trip and the starting time of the day in the same vehicle. Constraint (22) address the time relationship between the ending time of trip and the ending time of the day in the same vehicle. Constraint (23) is the daily working time constraint of a vehicle. Constraint (24)-26) is the date constraint of lead time, preferred date and closing date. Constraint (27)-(30) is the binary constraint of decision variables.
-```
